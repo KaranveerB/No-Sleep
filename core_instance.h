@@ -17,6 +17,8 @@ private:
 
 	QSystemTrayIcon *trayIcon;
 
-	QAction *clickedAction;
+    QAction *enableAction;
+    QAction *disableAction;
+    QAction *quitAction;
 
 };

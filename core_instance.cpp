@@ -6,12 +6,19 @@ CoreInstance::CoreInstance() : QWidget() {
 }
 
 void CoreInstance::createActions() {
-    clickedAction = new QAction(tr("&clicked"), this);
+    enableAction = new QAction(tr("&Enable"), this);
+    disableAction = new QAction(tr("&Disable"), this);
+    quitAction = new QAction(tr("&Quit"), this);
 }
 
 void CoreInstance::createTrayIcon() {
     auto *trayIconMenu = new QMenu(this);
-    trayIconMenu->addAction(clickedAction);
+
+    trayIconMenu->addAction(enableAction);
+    trayIconMenu->addAction(disableAction);
+
+    trayIconMenu->addSeparator();
+    trayIconMenu->addAction(quitAction);
 
     trayIcon = new QSystemTrayIcon(this);
     trayIcon->setContextMenu(trayIconMenu);
@@ -28,5 +35,6 @@ void CoreInstance::createTrayIcon() {
 
 void CoreInstance::createRunningNotification() {
     trayIcon->showMessage("No Sleep is running in the background",
-                          "Sleep is currently disabled. It can be re-enabled by clicking the tray icon, or by quitting the app or shutting down");
+                          "Sleep on lid close is currently disabled. It can be re-enabled by clicking the"
+                          "tray icon, or by quitting the app or shutting down");
 }
