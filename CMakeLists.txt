@@ -14,15 +14,25 @@ find_package(Qt6 COMPONENTS
         Core
         Gui
         Widgets
+        Svg
+        SvgWidgets
         REQUIRED)
 
-add_executable(no_sleep main.cpp core_instance.cpp core_instance.h icons.qrc)
+add_executable(no_sleep
+        main.cpp
+        core_instance.cpp
+        core_instance.h
+        sleep_controller.cpp
+        sleep_controller.h
+        icons.qrc)
 
 target_link_libraries(no_sleep
         Qt::Core
         Qt::Gui
         Qt::Widgets
-        )
+        Qt::Svg
+        Qt::SvgWidgets
+        powrprof)
 
 
 if (WIN32)

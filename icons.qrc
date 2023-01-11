@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="/">
-    <file>icons/temp.png</file>
+    <file>icons/enabled.svg</file>
+    <file>icons/disabled.svg</file>
   </qresource>
 </RCC>
