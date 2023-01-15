@@ -142,7 +142,8 @@ void CoreInstance::handleClickedAction(QSystemTrayIcon::ActivationReason reason)
 void CoreInstance::quitProgram() {
     sleepController.setSleepOnLidClose(true);
     trayIcon->showMessage("No Sleep restored system settings",
-                          "Sleep settings restored to their original values. Use backup scripts in an emergency.");
+                          "Sleep settings restored to their original values. "
+                          "Reopen the program and click \"Force enable sleep\" if there are issues.");
     QApplication::processEvents();
     QApplication::quit();
 }
