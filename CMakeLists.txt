@@ -31,8 +31,11 @@ target_link_libraries(no_sleep
         Qt::Gui
         Qt::Widgets
         Qt::Svg
-        Qt::SvgWidgets
-        powrprof)
+        Qt::SvgWidgets)
+
+if(WIN32)
+    target_link_libraries(no_sleep powrprof)
+endif()
 
 
 if (WIN32)
