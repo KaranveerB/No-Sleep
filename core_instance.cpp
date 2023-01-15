@@ -75,7 +75,7 @@ void CoreInstance::createTrayIcon() {
 void CoreInstance::initState() {
     // we pretty much just copy enableNoSleep() with a different notification
     enableAction->setChecked(true);
-    sleepController.setSleepOnLidClose(true);
+    sleepController.setSleepOnLidClose(false);
     trayIcon->setToolTip("No Sleep enabled");
     setSystemTrayIcon(enabledPixmap);
     trayIcon->setVisible(true);
