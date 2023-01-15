@@ -75,3 +75,8 @@ void SleepController::setActionOnLidCloseEnabled(PowerType type, unsigned int st
     throw std::runtime_error("not working on target platform");
 #endif
 }
+
+void SleepController::forceSetDefaultLidCloseActionToSleep() {
+    defaultAcSleepOnLidCloseState = 1;
+    defaultDcSleepOnLidCloseState = 1;
+}

@@ -22,6 +22,8 @@ private slots:
 
     void disableNoSleep();
 
+    void forceEnableSleepOnLidClose();
+
     void handleClickedAction(QSystemTrayIcon::ActivationReason reason);
 
     void quitProgram();
@@ -46,6 +48,7 @@ private:
 
     QAction *enableAction;
     QAction *disableAction;
+    QAction *forceEnableSleepAction;
     QAction *quitAction;
 
     QPixmap disabledPixmap;

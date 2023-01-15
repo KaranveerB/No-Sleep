@@ -25,6 +25,7 @@ public:
     SleepController();
 
     void setSleepOnLidClose(bool enabled);
+    void forceSetDefaultLidCloseActionToSleep();
 
 private:
     static unsigned int getActionOnLidCloseEnabled(PowerType type); // return value > 0 if enabled, 0 if disabled
