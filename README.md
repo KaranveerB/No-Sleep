@@ -1,10 +1,11 @@
-# No Sleep (for Laptops)
+# No Sleep (for Windows Laptops)
 A simple way to keep disable sleep (or whatever lid close behaviour you have) when closing your laptop lid.
-
-**Currently only working for Windows**
 
 Useful for certain things where you want to close your laptop lid without your laptop stopping whatever its doing.
 For example, a large download, using an external non-blind drawing tablet, using external monitors, hosting an RDP session.
+
+This program only supports Windows (specfically tested on 10). If you're on Linux and have systemd, you can use `systemd-inhibit --what=handle-lid-switch sleep 1d` (or some other timespan),
+keep it running in the background, and kill it with ctrl+c when you're done as an alternative to this program.
 
 ## Installation
 Download the latest release, unzip, and move the folder to the desired location. Make sure to keep the contents of the folder together.
