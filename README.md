@@ -1,5 +1,5 @@
 # No Sleep (for Windows Laptops)
-A simple way to keep disable sleep (or whatever lid close behaviour you have) when closing your laptop lid.
+A simple way to disable sleep (or whatever lid close behaviour you have) when closing your laptop lid.
 
 Useful for certain things where you want to close your laptop lid without your laptop stopping whatever its doing.
 For example, a large download, using an external non-blind drawing tablet, using external monitors, hosting an RDP session.
